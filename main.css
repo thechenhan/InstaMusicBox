@@ -4,10 +4,22 @@
 
 .menu {
 	margin-top: 10px;
-	margin-left: 200px;
 	text-shadow: 2px 2px 20px #b0c4de;
 	font-size: 12pt;
 	font-family: Century Gothic, sans-serif;
+}
+
+.menu > img {
+	display: inline-block;
+	margin-left: 20px;
+	height: 100px;
+	width: auto;
+}
+
+.mynav {
+	display: inline-block;
+	margin-left: 170px;
+	font-size: 15pt;
 }
 
 .mynav > li {
@@ -23,7 +35,7 @@
 }
 
 .introtxt {
-	margin-top: 50px;
+	margin-top: 20px;
 	padding: 60px;
 	color: white;
 }
@@ -33,7 +45,7 @@
 }
 
 .introtxt > p {
-	max-width: 580px;
+	max-width: 720px;
 	display: inline-block;
 	padding: 20px;
 	font-size: 12pt;
