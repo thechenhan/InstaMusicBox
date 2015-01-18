@@ -112,9 +112,9 @@ function init() {
   camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
   scene = new THREE.Scene();
 
-  camera.position.x = 245;
-  camera.position.y = 95;
-  camera.position.z = 169;
+  camera.position.x = 285;
+  camera.position.y = 108;
+  camera.position.z = 163;
   camera.lookAt(new THREE.Vector3(0, 0, 0));
 
   // start the renderer
@@ -640,7 +640,7 @@ function addControls() {
     controls.rotateSpeed = 1;
     controls.zoomSpeed = 2;
     controls.panSpeed = 1;
-
+    
     controls.noZoom = false;
     controls.noPan = false;
 

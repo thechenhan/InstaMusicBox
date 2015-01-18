@@ -39,10 +39,14 @@ $(document).ready(function(){
 	});
 
 	$("#zoom-in").click(function() {
-		alert("write zoom in - main.js");
+		camera.fov *= 0.9;
+  camera.updateProjectionMatrix();
+		
 	});
 
 	$("#zoom-out").click(function() {
-		alert("write zoom out - main.js");
+		camera.fov *= 1.1;
+  camera.updateProjectionMatrix();
+		
 	});
 });

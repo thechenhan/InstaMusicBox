@@ -135,6 +135,12 @@ footer {
 	left: 60px;
 }
 
+#controlTips {
+	position: absolute;
+	top: 260px;
+  	left: 60px;
+}
+
 #get-started-button {
 	margin-top: 100px;
 	margin-bottom: 40px;
