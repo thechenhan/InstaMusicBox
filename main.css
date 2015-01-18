@@ -1,0 +1,84 @@
+.active {
+	font-weight: bold;
+}
+
+.menu {
+	margin-top: 10px;
+	margin-left: 200px;
+	text-shadow: 2px 2px 20px #b0c4de;
+	font-size: 12pt;
+	font-family: Century Gothic, sans-serif;
+}
+
+.mynav > li {
+	display: inline-block;
+}
+
+.main {
+	background-color: #b0c4de;
+	text-align: center;
+	background-image: url("giphy.gif");
+	/*background-repeat: no-repeat;*/
+	background-size: 100% auto;
+}
+
+.introtxt {
+	margin-top: 50px;
+	padding: 60px;
+	color: white;
+}
+
+.introtxt > h1 {
+	font-weight: bold;
+}
+
+.introtxt > p {
+	max-width: 580px;
+	display: inline-block;
+	padding: 20px;
+	font-size: 12pt;
+}
+
+.introtxt > a {
+	display: block;
+}
+
+footer {
+	padding: 20px;
+	background-color: #bbbbbb;
+	text-align: center;
+}
+
+#songselect {
+	display: none;
+}
+
+#homepage {
+	font-family: Century Gothic, sans-serif;
+}
+
+#createpage {
+	display: none;
+}
+
+#aboutpage {
+	display: none;
+	background-color: #b0c4de;
+}
+
+#aboutpage .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+#aboutpage h2 {
+  font-weight: normal;
+}
+.col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.rest {
+	width: 100%;
+	height: 500px;
+}
