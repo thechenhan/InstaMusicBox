@@ -1,15 +1,21 @@
 $(document).ready(function(){
-	$('#exportlink').hide();
+
+	clearPlayer = function() {
+		$('#exportlink').hide();
+		$('#play').hide();
+		$("#pause").hide();
+		player.stop();
+	}
 
 	$("#homelink").click(function() {
 		$("#createpage").hide();
 		$("#aboutpage").hide();
-		$("#songselect").hide();
-		$('#exportlink').hide();
 		$("#homepage").show();
 		$("#homepage2").show();
 		$(".active").removeClass("active");
 		$(this).addClass("active");
+		
+		clearPlayer();
 	});
 
 	$(".startworking").click(function() {
@@ -17,21 +23,21 @@ $(document).ready(function(){
 		$("#homepage2").hide();
 		$("#aboutpage").hide();
 		$("#createpage").show();
-		$("#songselect").show();
-		$('#exportlink').show();
 		$(".active").removeClass("active");
 		$("#createlink").addClass("active");
+
+		clearPlayer();
 	});
 
 	$("#aboutlink").click(function(){
 		$("#createpage").hide();
 		$("#homepage").hide();
 		$("#homepage2").hide();
-		$("#songselect").hide();
-		$('#exportlink').hide();
 		$("#aboutpage").show();
 		$(".active").removeClass("active");
 		$(this).addClass("active");
+
+		clearPlayer();
 	})
 
 	$("#exportlink").click(function(){

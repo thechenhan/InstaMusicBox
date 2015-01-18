@@ -248,6 +248,9 @@ $(function() {
 
   // this code allows users to change pieces by changing URLs
   window.onhashchange = function() {
+    $("#exportlink").show();
+    $("#pause").show();
+
     if (window.location.hash.length <= 1) {
       return;
     }
@@ -265,6 +268,21 @@ $(function() {
   }
 
   window.onhashchange();
+  $("#exportlink").hide();
+    $("#play").hide();
+    $("#pause").hide();
+
+    $("#pause").click(function() {
+        $(this).hide();
+        $("#play").show();
+        player.pause();
+    })
+
+    $("#play").click(function() {
+        $(this).hide();
+        $("#pause").show();
+        player.resume();
+    })
 });
 
 function addToDropdown(composer, submenu) {
