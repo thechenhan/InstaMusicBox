@@ -1,3 +1,11 @@
+body {
+	/*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+	/*font-family: 'Trebuchet MS', Helvetica, sans-serif;*/
+	/*font-family: Verdana, Geneva, sans-serif;*/
+	/*font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;*/
+	font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
+}
+
 .active {
 	font-weight: bold;
 }
@@ -6,7 +14,7 @@
 	margin-top: 10px;
 	text-shadow: 2px 2px 20px #b0c4de;
 	font-size: 12pt;
-	font-family: Century Gothic, sans-serif;
+	/*font-family: Century Gothic, sans-serif;*/
 }
 
 .menu > img {
@@ -29,13 +37,12 @@
 .main {
 	background-color: #b0c4de;
 	text-align: center;
-	background-image: url("giphy.gif");
-	/*background-repeat: no-repeat;*/
+	background-image: url("imgs/homepage.gif");
 	background-size: 100% auto;
 }
 
 .introtxt {
-	margin-top: 20px;
+	margin-top: 120px;
 	padding: 60px;
 	color: white;
 }
@@ -44,12 +51,12 @@
 	font-weight: bold;
 }
 
-.introtxt > p {
+/*.introtxt > p {
 	max-width: 720px;
 	display: inline-block;
-	padding: 20px;
+	padding: 40px;
 	font-size: 12pt;
-}
+}*/
 
 .introtxt > a {
 	display: block;
@@ -76,7 +83,18 @@ footer {
 }
 
 #homepage {
-	font-family: Century Gothic, sans-serif;
+	/*font-family: Century Gothic, sans-serif;*/
+}
+
+#homepage2 {
+	margin-top: 80px;
+	margin-bottom: 80px;
+	/*font-family: Century Gothic, sans-serif;*/
+}
+
+.padded-hr {
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 #createpage {
@@ -123,4 +141,34 @@ footer {
 	position: absolute;
 	top: 180px;
 	left: 60px;
+}
+
+#get-started-button {
+	margin-top: 100px;
+	margin-bottom: 40px;
+	height: 50px;
+	width: auto;
+	font-size: 14pt;
+}
+
+.featurette {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.featurette-image {
+	height: 250px;
+	width: auto;
+	margin-left: 50px;
 }
