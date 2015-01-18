@@ -87,19 +87,8 @@ var ballHeadstart = 1730;
 var timeInSong = -startDelay;
 var lastUpdatedTime = 0;
 
-function Ball(keyTarget) {
-  this.target = keyTarget;
-  this.angle = 2 * Math.PI * keyTarget / numKeys;
-  this.velocityUp = initVelocity * Math.sin(firingAngle);
-  this.cannon = new THREE.Mesh(
-    new THREE.SphereGeometry(ballRadius, 16, 16),
-    new THREE.MeshPhongMaterial({ color: ballColor })
-  );
-  this.cannon.position.y = 0;
-  this.object = new THREE.Object3D();
-  this.object.add(this.cannon);
-  this.object.rotation.y = this.angle;
-}
+
+
 
 function init() {
   var WIDTH = $('.rest').width(),
@@ -434,9 +423,10 @@ notes.splice(0, 1);
   
 }
 
+var cylinderGeo = new THREE.CylinderGeometry( cylinderRadius, cylinderRadius, cylinderLength, 32 );
 
 function addParts(){
-  var cylinderGeo = new THREE.CylinderGeometry( cylinderRadius, cylinderRadius, cylinderLength, 32 );
+  
   var cylinder = new THREE.Mesh( cylinderGeo, cylinderMaterial );
   cylinder.rotation.z = 90 / 180 * Math.PI;
   cylinder.position.x = cylinderLength / 2;

@@ -32,6 +32,6 @@ $(document).ready(function(){
 	})
 
 	$("#exportlink").click(function(){
-		var myStlString = stlFromGeometry( combFingerAarry[1], {download:true, useObjectPosition:true} );
+		console.log( stlFromGeometry( cylinderGeo, {download:true} ) )
 	});
 });
