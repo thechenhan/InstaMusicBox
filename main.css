@@ -124,3 +124,9 @@ footer {
 	top: 180px;
 	left: 60px;
 }
+
+#controlTips {
+	position: absolute;
+	top: 260px;
+  	left: 60px;
+}
