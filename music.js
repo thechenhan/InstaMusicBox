@@ -9,13 +9,7 @@ var clock = new THREE.Clock();
 
 window.onload = function() {
 //load the music_box soundfont and change the instrument to music_box.
-  MIDI.loadPlugin({
- //    soundfontUrl: "/soundfont/",
- //    instruments: "music_box",
- //    callback: function() {
- // MIDI.programChange(0, MIDI.GeneralMIDI.byName["music_box"].number);
-    }  
-  });
+  MIDI.loadPlugin();
 }
 
 
