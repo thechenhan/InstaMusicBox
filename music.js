@@ -9,8 +9,12 @@ var clock = new THREE.Clock();
 
 window.onload = function() {
 //load the music_box soundfont and change the instrument to music_box.
-  MIDI.loadPlugin();
+  MIDI.loadPlugin(function(){
+    console.log("testing here to see the mp3 file works");
+  }, "soundfont/acoustic_grand_piano-mp3.js");
+
 }
+
 
 
 function switchTo(file) {
