@@ -1,4 +1,4 @@
-//var myTexture = THREE.loadTexture( 'crate.gif' );
+
 var texture = new THREE.ImageUtils.loadTexture('gold.jpg');
 var texture2 = new THREE.ImageUtils.loadTexture('steel2.jpg');
 var texture3 = new THREE.ImageUtils.loadTexture('bronze.jpg');
@@ -16,6 +16,7 @@ var combFingerObejct = new THREE.Object3D();
 var combFingerAarry = [];
 var combAssem = new THREE.Object3D();
 var handleAssem = new THREE.Object3D();
+
 
 
 var comnbFingerExtrudeSettings = {
@@ -107,13 +108,13 @@ function init() {
   renderer.gammaInput = true;
   renderer.gammaOutput = true;
   renderer.setSize(WIDTH, HEIGHT);
-  renderer.setClearColorHex( 0xAAAAAA, 1.0 );
+  renderer.setClearColorHex( 0xb0c4de, 1.0 );
   camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
   scene = new THREE.Scene();
 
-  camera.position.x = 200;
-  camera.position.y = 200;
-  camera.position.z = 200;
+  camera.position.x = 245;
+  camera.position.y = 95;
+  camera.position.z = 169;
   camera.lookAt(new THREE.Vector3(0, 0, 0));
 
   // start the renderer
@@ -136,6 +137,9 @@ function fillScene() {
   addLighting(); //add the light
   addbase();
   addParts(); //add the main part: comb, cylinder, etc.
+
+  var cameraCube;
+
  
 }
 
