@@ -26,7 +26,11 @@ function switchTo(file) {
   xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET", file, false);
   xmlhttp.send(null);
-  var fileContent = xmlhttp.responseText;
+  startPlay(xmlhttp.responseText);
+}
+
+function startPlay(midiFile) {
+  var fileContent = midiFile;
 
   player = MIDI.Player;
   player.timeWarp = 1;
@@ -78,4 +82,17 @@ function switchTo(file) {
   });
 }
 
+function handleFileSelect(evt) {
+  var files = evt.target.files; // FileList object
 
+  // files is a FileList of File objects. List some properties.
+  alert(files[0].name);
+  var reader = new FileReader();
+  reader.onload = function(){
+    var newtrack = reader.result;
+    startPlay(newtrack);
+  };
+  reader.readAsDataURL(files[0]);
+}
+
+document.getElementById('files').addEventListener('change', handleFileSelect, false);
