@@ -11,7 +11,7 @@ body {
 }
 
 .menu {
-	margin-top: 10px;
+	/*margin-top: 10px;*/
 	text-shadow: 2px 2px 20px #b0c4de;
 	font-size: 12pt;
 	/*font-family: Century Gothic, sans-serif;*/
@@ -19,14 +19,14 @@ body {
 
 .menu > img {
 	display: inline-block;
-	margin-left: 20px;
+	margin-left: 40px;
 	height: 100px;
 	width: auto;
 }
 
 .mynav {
 	display: inline-block;
-	margin-left: 170px;
+	margin-left: 30px;
 	font-size: 15pt;
 }
 
