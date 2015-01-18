@@ -34,4 +34,12 @@ $(document).ready(function(){
 	$("#exportlink").click(function(){
 		console.log( stlFromGeometry( cylinderGeo, {download:true} ) )
 	});
+
+	$("#zoom-in").click(function() {
+		alert("write zoom in - main.js");
+	});
+
+	$("#zoom-out").click(function() {
+		alert("write zoom out - main.js");
+	});
 });
