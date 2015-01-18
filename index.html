@@ -13,16 +13,17 @@
 
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
+    
+    <script src="assets/js/jquery.js"></script>
     <!-- Le strappe de boote -->
     <link href="assets/css/bootstrap.min.css" type="text/css" rel="stylesheet">
 
-    <script src="assets/js/jquery.js"></script>
     <script src="assets/js/three.js"></script>
     <script src="assets/js/trackballControls.js"></script>
 
     <!-- soundfont.js package -->
     <script src="assets/js/MIDI.min.js"></script>
+    <script src="assets/js/THREE2STL.js"></script>
 
     <!-- jasmid package -->
     <script src="assets/inc/jasmid/stream.js"></script>
@@ -54,6 +55,7 @@
         <li role="presentation"><a class="startworking" id="createlink" href="#">Create</a></li>
         <li role="presentation"><a id="aboutlink" href="#">About</a></li>
 
+
         <li class="dropdown">
             <a id="songselect" href="#" class="dropdown-toggle" data-toggle="dropdown">
               Song Select
@@ -77,7 +79,9 @@
               </li>
             </ul>
           </li>
+          <li><a id="exportlink" href="#">Export .STL</a></li>
       </ul>
+
     </div>
 
 <!--
@@ -183,7 +187,7 @@
     <script src="main.js"></script>
 
     <footer>
-      2015 @Mhacks
+      2015 @ Mhacks
     </footer>
    
   </body>

@@ -530,7 +530,7 @@ function addLighting(){
 
 function animate() {
   window.requestAnimationFrame(animate);
-  timeDelta = Date.now() - lastUpdatedTime
+  timeDelta = Date.now() - lastUpdatedTime;
   
 
   
@@ -664,8 +664,8 @@ function addControls() {
 try {
 init();
 fillScene();
-var axisHelper = new THREE.AxisHelper( 500 );
-scene.add( axisHelper );
+//var axisHelper = new THREE.AxisHelper( 500 );
+//scene.add( axisHelper );
 
 animate();
 } catch(e) {
