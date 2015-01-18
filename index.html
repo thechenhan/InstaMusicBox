@@ -112,7 +112,14 @@
         <span class="caret"></span>
         </button>
 
-        <input type="file" id="files" name="files[]" multiple />
+<!--         <div id="uploadsong">
+          or <input type="file" id="files"/>
+        </button> -->
+
+        <label id="uploadsong" class="btn btn-primary" for="files">
+            <input id="files" type="file" style="display:none;">
+            or Upload your own song!
+        </label>
 
         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices">
           <li class="dropdown-submenu">

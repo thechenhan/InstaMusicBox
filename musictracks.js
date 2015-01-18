@@ -248,8 +248,6 @@ $(function() {
 
   // this code allows users to change pieces by changing URLs
   window.onhashchange = function() {
-    $("#exportlink").show();
-    $("#pause").show();
 
     if (window.location.hash.length <= 1) {
       return;

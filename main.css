@@ -79,6 +79,13 @@ footer {
 	top: 40px;
 }
 
+#uploadsong {
+	z-index: 1;
+	position: absolute;
+	left: 150px;
+	top: 40px;
+}
+
 #exportlink {
 	z-index: 1;
 	position: absolute;

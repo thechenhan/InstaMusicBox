@@ -79,6 +79,9 @@ function startPlay(midiFile) {
     }, startDelay);
 
     musicPlaying = true;
+
+    $("#exportlink").show();
+    $("#pause").show();
   });
 }
 
@@ -86,7 +89,6 @@ function handleFileSelect(evt) {
   var files = evt.target.files; // FileList object
 
   // files is a FileList of File objects. List some properties.
-  alert(files[0].name);
   var reader = new FileReader();
   reader.onload = function(){
     var newtrack = reader.result;
