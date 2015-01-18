@@ -56,31 +56,6 @@
         <li role="presentation"><a id="homelink" class="active" href="#">Home</a></li>
         <li role="presentation"><a class="startworking" id="createlink" href="#">Create</a></li>
         <li role="presentation"><a id="aboutlink" href="#">About</a></li>
-
-        <li class="dropdown">
-            <a id="songselect" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Song Select
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices">
-              <li class="dropdown-submenu">
-                <a tabindex="-1" href="#">A-G</a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices-1">
-                </ul>
-              </li>
-              <li class="dropdown-submenu">
-                <a tabindex="-1" href="#">H-R</a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices-2">
-                </ul>
-              </li>
-              <li class="dropdown-submenu">
-                <a tabindex="-1" href="#">S-Z</a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices-3">
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a id="exportlink" href="#">Export .STL</a></li>
       </ul>
     </div>
 
@@ -99,6 +74,45 @@
     </div>
 
     <div id="createpage" class="rest">
+      <div class="dropdown">
+<!--         <a id="songselect" class="dropdown-toggle" data-toggle="dropdown">
+          Song Select
+          <b class="caret"></b>
+        </a> -->
+        <button id="songselect" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+          Select Song
+        <span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices">
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">A-G</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices-1">
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">H-R</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices-2">
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">S-Z</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices-3">
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- 
+      <button class="btn btn-success" id="exportlink">
+        <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+        Download .STL
+      </button>
+
+      <button id="zoom-in" class="plain-button">
+        <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+      </button> -->
+      <!-- <span id="zoom-out" class="glyphicon glyphicon-zoom-out" aria-hidden="true"></span> -->
+
       <div id="MusicBox"></div> 
     </div>
 

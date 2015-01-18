@@ -62,7 +62,24 @@ footer {
 }
 
 #songselect {
-	display: none;
+	z-index: 1;
+	position: absolute;
+	left: 20px;
+	top: 40px;
+}
+
+#exportlink {
+	z-index: 1;
+	position: relative;
+	left: 160px;
+	top: 40px;
+}
+
+#zoom-in {
+	z-index: 1;
+	position: relative;
+	left: 160px;
+	top: 40px;
 }
 
 #homepage {
