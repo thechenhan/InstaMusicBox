@@ -3,15 +3,27 @@
   <head>
     <title>InstaMusicBox</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    
+    <script src="assets/js/jquery.js"></script>
     <!-- Le strappe de boote -->
     <link href="assets/css/bootstrap.min.css" type="text/css" rel="stylesheet">
 
-    <script src="assets/js/jquery.js"></script>
     <script src="assets/js/three.js"></script>
     <script src="assets/js/trackballControls.js"></script>
 
     <!-- soundfont.js package -->
     <script src="assets/js/MIDI.min.js"></script>
+    <script src="assets/js/THREE2STL.js"></script>
 
     <!-- jasmid package -->
     <script src="assets/inc/jasmid/stream.js"></script>
@@ -22,82 +34,155 @@
     <script src="assets/inc/Base64.js" type="text/javascript"></script>
     <script src="assets/inc/base64binary.js" type="text/javascript"></script>
 
-    <style>
-      body, html{
-        min-height: 100%;
-        min-width: 100%;
-      }
-
-      .navbar {
-        margin-bottom: 0px;
-      }
-
-      .rest {
-        position:absolute;
-        top: 40px;
-        bottom:0;
-        left:0;
-        right:0
-      }
-
-       </style>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    
+    <link href="hover.css" rel="stylesheet" media="all">
   </head>
 
-  <body style="background-color:black;">
-    <div class="navbar navbar-inverse">
-      <div class="navbar-inner">
-        <a class="brand pull-right" href="#" onClick="$('body').addClass('darkened');">InstaMusicBox</a>
-        <ul class="nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Song Select
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices">
-              <li class="dropdown-submenu">
-                <a tabindex="-1" href="#">A-G</a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices-1">
-                </ul>
-              </li>
-              <li class="dropdown-submenu">
-                <a tabindex="-1" href="#">H-R</a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices-2">
-                </ul>
-              </li>
-              <li class="dropdown-submenu">
-                <a tabindex="-1" href="#">S-Z</a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices-3">
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="divider-vertical"></li>
-          <li>
-            <p class="navbar-text" id="current-song"></p>
-          </li>
-        </ul>
-        <ul class="nav pull-right">
-          <li><a href="http://www.InstaMusicBox.com">By Han CHEN</a></li>
-        </ul>
+  <body>
+    <div class="container-fluid menu">
+      <img src="logo.png" class="hvr-wobble-vertical  ">
+
+      <ul class="nav mynav">
+        <li class="nav-item" role="presentation"><a id="homelink" class="active" href="#">Home</a></li>
+        <li class="nav-item" role="presentation"><a class="startworking" id="createlink" href="#">Create</a></li>
+        <li class="nav-item" role="presentation"><a id="aboutlink" href="#"> About </a></li>
+      </ul>
+    </div>
+
+    <div id="homepage" class="container-fluid main">
+      <div class = "container introtxt">
+        <h1>Get 3D Model for Your Own Music Box</h1>
+<!--         <p>
+          Enter the site to create your own music box for ANY piece of music. We will generate a 3D model based on the music. The 3D model can play the music visually. More importantly, you can send it for 3D printing to get the physical music box with any music. It will be a great gift to your friends, and a marvellous joy to your life!
+        </p> -->
+        <a class="startworking" href="#">
+          <button id="get-started-button" type="button" class="btn btn-primary">
+            GET STARTED
+          </button>
+        </a>
       </div>
     </div>
-    <div class="rest">
+
+    <div id="homepage2" class="container-fluid">
+      <div class="row featurette">
+        <div class="col-md-8 paras">
+          <h2 class="featurette-heading">1815, <span class="text-muted">the first music box</span></h2>
+          <p class="lead"> was born in Switzerland. For most of the 19th century, the bulk of music box production was concentrated in Switzerland, building upon a strong watchmaking tradition. They were usually built for the affluent of the pre-phonograph 19th century.</p>
+        </div>
+        <div class="col-md-4">
+          <img id="img1" class="featurette-image img-responsive hvr-float" src="imgs/1.png" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+      
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-4">
+          <img id="img2" class="featurette-image img-responsive hvr-float " src="imgs/2.png" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-8">
+          <h2 class="featurette-heading">1870, <span class="text-muted">the interchangeable music box</span></h2>
+          <p class="lead">was invented by a German inventor. He created a music box with discs, therefore allowing an easier and more frequent change of tunes. However, the music choices were still limited and the processes were still complicated and took long time to build.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-8">
+          <h2 class="featurette-heading">Today, <span class="text-muted">your own music box </span></h2>
+          <p class="lead"> can be built by this app we build. By means of the cutting-edge web technologies, such as HTML5, WebGL and MIDI.js, and 3D Printing technology, this web app can convert your favourite song to a music box 3D STL model and finally you can print it out to build your unique music box instantly.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img id="img3" class="featurette-image img-responsive hvr-float" src="imgs/3.png" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+    </div>
+
+    <div id="createpage" class="rest">
+      <div class="dropdown">
+<!--         <a id="songselect" class="dropdown-toggle" data-toggle="dropdown">
+          Song Select
+          <b class="caret"></b>
+        </a> -->
+        <button id="songselect" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+          Select Song
+        <span class="caret"></span>
+        </button>
+
+<!--         <div id="uploadsong">
+          or <input type="file" id="files"/>
+        </button> -->
+
+        <label id="uploadsong" class="btn btn-primary" for="files">
+            <input id="files" type="file" style="display:none;">
+            or Upload your own song!
+        </label>
+
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices">
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">A-G</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices-1">
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">H-R</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices-2">
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">S-Z</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="track-choices-3">
+            </ul>
+          </li>
+        </ul>
+        <button id="exportlink" class="btn btn-success" >
+          <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+          Download .STL
+        </button>
+
+        <button id="zoom-in" class="bt-button">
+          <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+        </button>
+
+        <button id="zoom-out" class="bt-button">
+          <span class="glyphicon glyphicon-zoom-out" aria-hidden="true"></span>
+        </button>
+
+        <button id="pause" class="bt-button">
+          <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+        </button>
+
+        <button id="play" class="bt-button">
+          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+        </button>
+
+          <span id="controlTips">Left Click : Rotate <br>
+            Right Click : Pan <br>
+            Middel Wheel : Zoom
+          </span>
+
+      </div>
       <div id="MusicBox"></div> 
     </div>
 
-   
-
-   
+    <div id="aboutpage" class="container">
+      
+    </div>
 
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="TubeGeometry.js"></script>
+   
     <script src="music.js"></script>
     <script src="instrument.js"></script>
     <script src="musictracks.js"></script>
 
-    <script type="text/javascript">
- 
-    </script>
+    <script src="main.js"></script>
+
+    <footer>
+      2015 @ Mhacks
+    </footer>
    
   </body>
 </html>

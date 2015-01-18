@@ -1,5 +1,5 @@
 var tracks = [
-    "001-Albeniz I - Tango", 
+    "001-A Chinese Song - Molihua", 
     "002-Bach, JS - Aria (Goldberg Variations)", 
     "003-Bach, JS - Fugue (WTC Bk-1 No-21)", 
     "004-Bach, JS - Fugue (WTC Bk-1 No-3)", 
@@ -214,7 +214,7 @@ var tracks = [
     "213-Tchaikovsky - Waltz Op-39 No-8", 
     "214-Villa-Lobos - Punch (Le Polichinelle)", 
     "215-Von Weber - Rondo Brilliant in E-flat Op-62",
-    "216-Chinese Folk Song - Mo Li Hua"
+    
 ];
 
 $(function() {
@@ -248,6 +248,7 @@ $(function() {
 
   // this code allows users to change pieces by changing URLs
   window.onhashchange = function() {
+
     if (window.location.hash.length <= 1) {
       return;
     }
@@ -265,6 +266,21 @@ $(function() {
   }
 
   window.onhashchange();
+  $("#exportlink").hide();
+    $("#play").hide();
+    $("#pause").hide();
+
+    $("#pause").click(function() {
+        $(this).hide();
+        $("#play").show();
+        player.pause();
+    })
+
+    $("#play").click(function() {
+        $(this).hide();
+        $("#pause").show();
+        player.resume();
+    })
 });
 
 function addToDropdown(composer, submenu) {

@@ -1,4 +1,4 @@
-//var myTexture = THREE.loadTexture( 'crate.gif' );
+
 var texture = new THREE.ImageUtils.loadTexture('gold.jpg');
 var texture2 = new THREE.ImageUtils.loadTexture('steel2.jpg');
 var texture3 = new THREE.ImageUtils.loadTexture('bronze.jpg');
@@ -16,6 +16,7 @@ var combFingerObejct = new THREE.Object3D();
 var combFingerAarry = [];
 var combAssem = new THREE.Object3D();
 var handleAssem = new THREE.Object3D();
+
 
 
 var comnbFingerExtrudeSettings = {
@@ -87,19 +88,8 @@ var ballHeadstart = 1730;
 var timeInSong = -startDelay;
 var lastUpdatedTime = 0;
 
-function Ball(keyTarget) {
-  this.target = keyTarget;
-  this.angle = 2 * Math.PI * keyTarget / numKeys;
-  this.velocityUp = initVelocity * Math.sin(firingAngle);
-  this.cannon = new THREE.Mesh(
-    new THREE.SphereGeometry(ballRadius, 16, 16),
-    new THREE.MeshPhongMaterial({ color: ballColor })
-  );
-  this.cannon.position.y = 0;
-  this.object = new THREE.Object3D();
-  this.object.add(this.cannon);
-  this.object.rotation.y = this.angle;
-}
+
+
 
 function init() {
   var WIDTH = $('.rest').width(),
@@ -118,13 +108,13 @@ function init() {
   renderer.gammaInput = true;
   renderer.gammaOutput = true;
   renderer.setSize(WIDTH, HEIGHT);
-  renderer.setClearColorHex( 0xAAAAAA, 1.0 );
+  renderer.setClearColorHex( 0xb0c4de, 1.0 );
   camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
   scene = new THREE.Scene();
 
-  camera.position.x = 200;
-  camera.position.y = 200;
-  camera.position.z = 200;
+  camera.position.x = 285;
+  camera.position.y = 108;
+  camera.position.z = 163;
   camera.lookAt(new THREE.Vector3(0, 0, 0));
 
   // start the renderer
@@ -147,6 +137,9 @@ function fillScene() {
   addLighting(); //add the light
   addbase();
   addParts(); //add the main part: comb, cylinder, etc.
+
+  var cameraCube;
+
  
 }
 
@@ -434,9 +427,10 @@ notes.splice(0, 1);
   
 }
 
+var cylinderGeo = new THREE.CylinderGeometry( cylinderRadius, cylinderRadius, cylinderLength, 32 );
 
 function addParts(){
-  var cylinderGeo = new THREE.CylinderGeometry( cylinderRadius, cylinderRadius, cylinderLength, 32 );
+  
   var cylinder = new THREE.Mesh( cylinderGeo, cylinderMaterial );
   cylinder.rotation.z = 90 / 180 * Math.PI;
   cylinder.position.x = cylinderLength / 2;
@@ -530,7 +524,7 @@ function addLighting(){
 
 function animate() {
   window.requestAnimationFrame(animate);
-  timeDelta = Date.now() - lastUpdatedTime
+  timeDelta = Date.now() - lastUpdatedTime;
   
 
   
@@ -646,7 +640,7 @@ function addControls() {
     controls.rotateSpeed = 1;
     controls.zoomSpeed = 2;
     controls.panSpeed = 1;
-
+    
     controls.noZoom = false;
     controls.noPan = false;
 
@@ -664,8 +658,8 @@ function addControls() {
 try {
 init();
 fillScene();
-var axisHelper = new THREE.AxisHelper( 500 );
-scene.add( axisHelper );
+//var axisHelper = new THREE.AxisHelper( 500 );
+//scene.add( axisHelper );
 
 animate();
 } catch(e) {

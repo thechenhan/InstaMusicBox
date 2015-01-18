@@ -1,0 +1,190 @@
+body {
+	/*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+	/*font-family: 'Trebuchet MS', Helvetica, sans-serif;*/
+	/*font-family: Verdana, Geneva, sans-serif;*/
+	/*font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;*/
+	font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
+}
+
+.active {
+	font-weight: bold;
+}
+
+.menu {
+	/*margin-top: 10px;*/
+	text-shadow: 2px 2px 20px #b0c4de;
+	font-size: 12pt;
+	/*font-family: Century Gothic, sans-serif;*/
+}
+
+.menu > img {
+	display: inline-block;
+	margin-left: 40px;
+	height: 100px;
+	width: auto;
+}
+
+.mynav {
+	display: inline-block;
+	margin-left: 30px;
+	font-size: 16pt;
+}
+
+.nav-item {
+	margin-left: 5px;
+}
+
+.mynav > li {
+	display: inline-block;
+}
+
+.main {
+	background-color: #b0c4de;
+	text-align: center;
+	background-image: url("imgs/homepage.gif");
+	background-size: 100% auto;
+}
+
+.introtxt {
+	margin-top: 120px;
+	padding: 60px;
+	color: white;
+}
+
+.introtxt > h1 {
+	font-weight: bold;
+}
+
+/*.introtxt > p {
+	max-width: 720px;
+	display: inline-block;
+	padding: 40px;
+	font-size: 12pt;
+}*/
+
+.introtxt > a {
+	display: block;
+}
+
+footer {
+	padding: 20px;
+	background-color: #dddddd;
+	text-align: center;
+}
+
+#songselect {
+	z-index: 1;
+	position: absolute;
+	left: 20px;
+	top: 40px;
+}
+
+#uploadsong {
+	z-index: 1;
+	position: absolute;
+	left: 150px;
+	top: 40px;
+}
+
+#exportlink {
+	z-index: 1;
+	position: absolute;
+	left: 20px;
+	top: 80px;
+	display: none;
+}
+
+#homepage {
+	/*font-family: Century Gothic, sans-serif;*/
+}
+
+#homepage2 {
+	margin-top: 80px;
+	margin-bottom: 80px;
+	/*font-family: Century Gothic, sans-serif;*/
+}
+
+.padded-hr {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#createpage {
+	display: none;
+}
+
+#aboutpage {
+	display: none;
+	background-color: #b0c4de;
+}
+
+.rest {
+	width: 100%;
+	height: 500px;
+}
+
+.bt-button {
+	background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    font-size: 50px;
+}
+
+#pause, #play{
+	position: absolute;
+	left: 40px;
+	top: 160px;
+}
+
+#zoom-in {
+	position: absolute;
+	top: 240px;
+	left: 40px;
+}
+
+#zoom-out {
+	position: absolute;
+	top: 320px;
+	left: 40px;
+}
+
+#controlTips {
+	position: absolute;
+	top: 400px;
+  	left: 20px;
+}
+
+#get-started-button {
+	margin-top: 100px;
+	margin-bottom: 40px;
+	height: 50px;
+	width: auto;
+	font-size: 14pt;
+}
+
+.featurette {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.featurette-image {
+	height: 250px;
+	width: auto;
+	/*margin-left: 50px;*/
+}
+
+.paras {
+	display: inline-block !important;
+}
