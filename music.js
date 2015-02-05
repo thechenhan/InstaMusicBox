@@ -7,15 +7,27 @@ var musicPlaying = false; //flag标志全局是否正在播放音乐
 var player; //全局midi播放器
 var clock = new THREE.Clock();
 
+
+// window.onload = function() {
+// //load the music_box soundfont and change the instrument to music_box.
+//   MIDI.loadPlugin({
+//     soundfontUrl: "/soundfont/",
+//     instruments: "music_box",
+//     callback: function() {
+//  MIDI.programChange(0, MIDI.GeneralMIDI.byName["music_box"].number);
+//     }  
+//   });
+// }
+
+
 window.onload = function() {
-//load the music_box soundfont and change the instrument to music_box.
-  MIDI.loadPlugin({
-    soundfontUrl: "/soundfont/",
-    instruments: "music_box",
-    callback: function() {
- MIDI.programChange(0, MIDI.GeneralMIDI.byName["music_box"].number);
-    }  
-  });
+  MIDI.loadPlugin(function() {
+    console.log("Sound being generated with " + MIDI.lang + ".");
+    
+    if (window.location.hash === '#' || window.location.hash === '') {
+      //switchTo('tracks/157-Rachmaninov - Flight of the Bumblebee');
+    }
+  }, "soundfont/acoustic_grand_piano-mp3.js");
 }
 
 
