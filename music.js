@@ -1,6 +1,6 @@
 var startDelay = 2000;
 
-var notes = []; //存储全部音符
+var notes = []; //store all of the notes
 var start; //全局开始播放时间
 var musicPlaying = false; //flag标志全局是否正在播放音乐
 
