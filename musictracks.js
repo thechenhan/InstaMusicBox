@@ -266,9 +266,9 @@ $(function() {
   }
 
   window.onhashchange();
-  $("#exportlink").hide();
-    $("#play").hide();
-    $("#pause").hide();
+  //$("#exportlink").hide();
+    //$("#play").hide();
+    //$("#pause").hide();
 
     $("#pause").click(function() {
         $(this).hide();

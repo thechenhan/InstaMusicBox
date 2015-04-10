@@ -1,10 +1,12 @@
 $(document).ready(function(){
 
 	clearPlayer = function() {
-		$('#exportlink').hide();
-		$('#play').hide();
-		$("#pause").hide();
-		player.stop();
+		//$('#exportlink').hide();
+		//$('#play').hide();
+		//$("#pause").hide();
+		//$("#exportlink").show();
+    	//$("#pause").show();
+		//player.stop();
 	}
 
 	$("#homelink").click(function() {
@@ -25,8 +27,9 @@ $(document).ready(function(){
 		$("#createpage").show();
 		$(".active").removeClass("active");
 		$("#createlink").addClass("active");
+	
 
-		clearPlayer();
+		//clearPlayer();
 	});
 
 	$("#aboutlink").click(function(){

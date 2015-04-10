@@ -34,9 +34,9 @@ var clock = new THREE.Clock();
 window.onload = function() {
   MIDI.loadPlugin(function() {
     console.log("Sound being generated with " + MIDI.lang + ".");
-    
+    switchTo('tracks/001-A Chinese Song - Molihua');
     if (window.location.hash === '#' || window.location.hash === '') {
-      //switchTo('tracks/157-Rachmaninov - Flight of the Bumblebee');
+      
     }
   }, "soundfont/music_box-mp3.js");
 }
@@ -99,8 +99,9 @@ function switchTo(file) {
 
     musicPlaying = true;
 
-    $("#exportlink").show();
+    //$("#exportlink").show();
     $("#pause").show();
+    $("#play").hide();
   });
 }
 
