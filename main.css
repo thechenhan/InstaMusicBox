@@ -124,9 +124,14 @@ height:100%;
 
 #aboutpage {
 	display: none;
-	background-color: #b0c4de;
+	
 }
 
+#intro{
+	font-size: 16px;
+	text-align:justify;
+	text-justify:distribute-all-lines;
+}
 
 .bt-button {
 	background:none;
@@ -143,6 +148,29 @@ height:100%;
 	display: none;
 }
 
+
+#img4{
+
+	max-height: 70px
+}
+
+#img5{
+
+	max-width: 140px;
+	max-height: 40px
+}
+
+.col-md-3{
+	height:100px;
+	display: flex;
+    align-items: center; 
+}
+
+.fb-like{
+	
+	vertical-align: top;
+	margin-right: 10px;
+}
 
 
 #zoom-in {

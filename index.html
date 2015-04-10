@@ -41,6 +41,20 @@
   </head>
 
   <body>
+   <div id="fb-root"></div>
+   <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
     <div class="container-fluid menu">
       <img src="logo.png" class="hvr-wobble-vertical  ">
 
@@ -170,7 +184,42 @@
     </div>
 
     <div id="aboutpage" class="container">
-       
+      <div class="row">
+        <div class="col-md-10">
+          <h2 class="featurette-heading">This is a<span class="text-muted"> Chrome Experiment</span></h2>
+
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          
+          <h3>Han CHEN <small> Founder and 3D Music Animation Kernel Developer</small></h3>
+          <p id="intro">He is from McGill University, a master student with strong programming, computer aided technology and 3D printing technology background. This creative project idea is from him. And he took most of the development work. He has published many computers and informatics in engineering topic academic papers in leading journals, IEEE and ASME conferences.  He is an incoming Facebook Software Engineer Intern in 2015 summer.<a href="https://ca.linkedin.com/pub/han-chen/71/137/aa1"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Han Chen's LinkedIn profile" style="vertical-align:middle;" border="0"></a></p>
+
+          <h3>Yixing JIANG <small> Front End Developer</small></h3>
+          <p id="intro">He is a Master's student at University of Michigan majoring in Computer Science. He is a Graduate Student Instructor for web development and database courses at Umich. He is also an incoming Facebook intern. He took some front-end development work in this project. <a href="https://www.linkedin.com/pub/yixing-jiang/61/292/5b6"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Han Chen's LinkedIn profile" style="vertical-align:middle;" border="0"></a> </p>
+
+          <h3>Acknowledgement</h3>
+          <p id="intro">Special thanks for the adoption from <a href="https://www.chromeexperiments.com/">Google Chrome Experiment </a> which is a showcase of web experiments written by the creative coding community. Also thanks to the midi file and idea from Xueqiao Xu's Euphony and Ucarion's Musical Turk projects. This web application is built with: WebGL, three.js, MIDI.js, jQuery, and Bootstrap.</p>
+
+        </div>
+      </div>
+      <div class="row continaer-fluid logos">     
+         <div class="col-md-3">
+          <img id="img5" class="img-responsive" src="imgs/Logo_2013_Google.png" alt="Generic placeholder image">
+          </div>
+         <div class="col-md-3">
+          <img id="img5" class="img-responsive" src="imgs/McGill_Logo.png" alt="Generic placeholder image">
+          </div>
+         <div class="col-md-3">
+          <img id="img5" class="img-responsive" src="imgs/UofMichigan_logo.png" alt="Generic placeholder image">
+         </div>
+         <div class="col-md-3">
+          <img id="img5" class="img-responsive" src="imgs/Facebooklogo.png" alt="Generic placeholder image">
+         </div>
+      </div>  
+    </div>    
     </div>
 
     <script src="assets/js/bootstrap.min.js"></script>
@@ -180,8 +229,11 @@
     <script src="musictracks.js"></script>
 
     <script src="main.js"></script>
+    
     <footer id ="footAbout">
-        Founder and 3D Graphics and Music Animation Kernel Made by Han Chen from McGill University. <br> Front-End Designed by Yixing Jiang from University of Michigan. <br> Built with: WebGL, three.js, MIDI.js, jQuery, and Bootstrap.<br>  Special Thanks to Xueqiao Xu's Euphony and Ucarion's Musical Turk <br> Recommend to use Google Chrome to visit<br>2015 Jan <br> We are both Facebook Software Engineer Intern at Menlo Park and looking for fulltime jobs now. <br> If you are interested, please <a href="mailto:thechenhan@gmail.com?Subject=Job Opportunity" target="_top">contact us</a>
+          Recommend to use Google Chrome to visit<br>2015 April <br> We are looking for fulltime jobs now. If you are interested, please <a href="mailto:thechenhan@gmail.com?Subject=Job Opportunity" target="_top">contact us</a><br><br>
+          <div class="fb-like" data-href="http://thechenhan.github.io/InstaMusicBox/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div><div class="g-plusone" data-size="medium" data-href="http://thechenhan.github.io/InstaMusicBox/"></div>
+          
     </footer>
   
    
